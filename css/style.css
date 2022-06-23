@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 48px;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+button {
+  font-family:'Times New Roman', Times, serif;
+}
+
+.felt {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #116626;
+  width: 70%;
+  height: 600px;
+  border: 1px solid black;
+  box-shadow: rgba(21, 23, 24, 0.7) 6px 6px 12px 0px inset, rgba(0, 0, 0, 0.2) -6px -6px 12px 2px inset;
+}
+
+.dealer-cards {
+  display: flex;
+  gap: 5px;
+}
+
+.dealer-second {
+  height: 200px;
+  width: 143.95px;
+  border-radius: 6px;
+  display: none;
+}
+
+img {
+  height: 200px;
+  width: auto;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  gap: 20px;
+}
+
+button {
+  font-size: 30px;
+  padding: 10px 20px;
+}
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

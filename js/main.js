@@ -32,10 +32,45 @@ function drawCard(){
 }
 
 function boardInit(data) {
+  // deals the cards with a dealer card face down
+  document.querySelector('h2').style.display = 'none'
+  document.querySelector('.title-screen').style.display = 'none'
   document.querySelector('.player-first').src = data.cards[0].image
   document.querySelector('.dealer-first').src = data.cards[1].image
   document.querySelector('.player-second').src = data.cards[2].image
   document.querySelector('.dealer-second').src = "img/back-card.jpeg"
   document.querySelector('.dealer-second').style.display = 'inline-block'
+
+  // stand
+  document.getElementById('stand').onclick = function() {
+    document.querySelector('.dealer-second').src = data.cards[3].image
+    document.querySelector('h2').style.display = 'inline-block'
+    document.querySelector('h2').innerText = `hi`
+
+    let p1 = convertToNum((data.cards[0].value))
+    let p2 = convertToNum((data.cards[2].value))
+    let d1 = convertToNum((data.cards[1].value))
+    let d2 = convertToNum((data.cards[3].value))
+
+    let playerTotal = p1 + p2
+    let dealerTotal = d1 + d2
+
+    console.log(playerTotal)
+    console.log(dealerTotal)
+  }
+
 }
 
+function convertToNum(val){
+  if(val === 'ACE'){
+    return 11
+  }else if(val === 'KING'){
+    return 10
+  }else if(val === 'QUEEN'){
+    return 10
+  }else if(val === 'JACK'){
+    return 10
+  }else{
+    return Number(val)
+  }
+}

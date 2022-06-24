@@ -2,11 +2,9 @@
   box-sizing: border-box;
 }
 
-h1 {
-  font-size: 48px;
-  display: flex;
-  justify-content: center;
-  margin: 20px;
+h2 {
+  font-size: 24px;
+  display: none;
 }
 
 button {
@@ -14,17 +12,39 @@ button {
 }
 
 .felt {
-  margin: 0 auto;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
   background: #116626;
   width: 70%;
   height: 600px;
-  border: 1px solid black;
-  box-shadow: rgba(21, 23, 24, 0.7) 6px 6px 12px 0px inset, rgba(0, 0, 0, 0.2) -6px -6px 12px 2px inset;
+  padding: 20px 0;
+  border: 15px solid #722600;
+  border-radius: 20px;
+  box-shadow: rgba(21, 23, 24, 0.7) 6px 6px 12px 0px inset, rgba(0, 0, 0, 0.2) -6px -6px 12px 2px inset, rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  width: 70%;
+}
+
+
+.title-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -10rem;
+  text-align: center;
+}
+
+span {
+  font-size: 24px;
+}
+
+h1 {
+  font-size: 74px;
+  color: gold;
+  font-family: 'Alegreya SC';
+  text-transform: uppercase;
 }
 
 .dealer-cards {
@@ -33,14 +53,14 @@ button {
 }
 
 .dealer-second {
-  height: 200px;
-  width: 143.95px;
+  height: 175px;
+  width: 125.95px;
   border-radius: 6px;
   display: none;
 }
 
 img {
-  height: 200px;
+  height: 175px;
   width: auto;
 }
 
@@ -54,6 +74,8 @@ img {
 button {
   font-size: 30px;
   padding: 10px 20px;
+  font-family: 'Alegreya SC';
+  cursor: pointer;
 }
 
 

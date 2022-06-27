@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/background.webp");
+  background-size: cover;
+}
+
 h2 {
   font-size: 24px;
   display: none;
@@ -38,10 +43,20 @@ button {
 
 span {
   font-size: 24px;
+  color: white;
+  font-family: 'Roboto Slab';
+  margin: 10px;
 }
 
 h1 {
   font-size: 74px;
+  color: gold;
+  font-family: 'Alegreya SC';
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 32px;
   color: gold;
   font-family: 'Alegreya SC';
   text-transform: uppercase;

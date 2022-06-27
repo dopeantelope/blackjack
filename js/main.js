@@ -45,7 +45,7 @@ function boardInit(data) {
   document.getElementById('stand').onclick = function() {
     document.querySelector('.dealer-second').src = data.cards[3].image
     document.querySelector('h2').style.display = 'inline-block'
-    document.querySelector('h2').innerText = `hi`
+    document.querySelector('h2').innerText = `Dealer Wins!`
 
     let p1 = convertToNum((data.cards[0].value))
     let p2 = convertToNum((data.cards[2].value))

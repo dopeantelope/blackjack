@@ -55,7 +55,7 @@ h1 {
   text-transform: uppercase;
 }
 
-h2 {
+.winner {
   font-size: 32px;
   position: fixed;
   top: 44%;

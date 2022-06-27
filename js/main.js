@@ -41,22 +41,28 @@ function boardInit(data) {
   document.querySelector('.dealer-second').src = "img/back-card.jpeg"
   document.querySelector('.dealer-second').style.display = 'inline-block'
 
+  let p1 = convertToNum((data.cards[0].value))
+  let p2 = convertToNum((data.cards[2].value))
+  let d1 = convertToNum((data.cards[1].value))
+
+  let playerTotal = p1 + p2
+  let dealerTotal = d1
+
+  score(playerTotal, dealerTotal)
+
   // stand
   document.getElementById('stand').onclick = function() {
     document.querySelector('.dealer-second').src = data.cards[3].image
     document.querySelector('h2').style.display = 'inline-block'
     document.querySelector('h2').innerText = `Dealer Wins!`
 
-    let p1 = convertToNum((data.cards[0].value))
-    let p2 = convertToNum((data.cards[2].value))
-    let d1 = convertToNum((data.cards[1].value))
-    let d2 = convertToNum((data.cards[3].value))
+  }
 
-    let playerTotal = p1 + p2
-    let dealerTotal = d1 + d2
-
-    console.log(playerTotal)
-    console.log(dealerTotal)
+  function score(playerTotal, dealerTotal) {
+    document.querySelector('.dealer-count').style.display = 'flex'
+    document.querySelector('.player-count').style.display = 'flex'
+    document.querySelector('.dealer-count').innerText = dealerTotal
+    document.querySelector('.player-count').innerText = playerTotal
   }
 
 }

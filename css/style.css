@@ -7,9 +7,11 @@ body {
   background-size: cover;
 }
 
-h2 {
+h3 {
   font-size: 24px;
-  display: none;
+  font-family: 'Roboto Slab';
+  color: white;
+  display: flex;
 }
 
 button {
@@ -21,10 +23,9 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   background: #116626;
   width: 70%;
-  height: 600px;
+  height: 640px;
   padding: 20px 0;
   border: 15px solid #722600;
   border-radius: 20px;
@@ -37,7 +38,6 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: -10rem;
   text-align: center;
 }
 
@@ -57,14 +57,32 @@ h1 {
 
 h2 {
   font-size: 32px;
+  position: fixed;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: gold;
   font-family: 'Alegreya SC';
   text-transform: uppercase;
 }
 
-.dealer-cards {
+h3 {
+  justify-content: center;
+  display: none;
+}
+
+.dealer-cards, .player-cards {
   display: flex;
+  justify-content: center;
   gap: 5px;
+}
+
+.dealer-count {
+  margin-bottom: -130px;
+}
+
+.player-count {
+  margin-top: -130px;
 }
 
 .dealer-second {

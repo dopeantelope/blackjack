@@ -25,7 +25,6 @@ function deal(){
       .then(res => res.json()) // parse response as JSON
       .then(data => {
         console.log(data)
-        reset()
         boardInit(data)
       })
       .catch(err => {
@@ -34,13 +33,6 @@ function deal(){
 
 }
 
-function reset() {
-  s.playerFirstCard.src = ''
-  s.dealerFirstCard.src = ''
-  s.playerSecondCard.src = ''
-  s.dealerSecondCard.src = ''
-  s.dealerSecondCard.style.display = ''
-}
 
 function boardInit(data) {
   // deals the cards with a dealer card face down

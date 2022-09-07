@@ -18,7 +18,7 @@ class Cards {
       this.convertToNum(valuesArray)
     }
 
-    convertToNum = (card) => {
+    convertToNum(card) {
       card.forEach(element => {
         if (element === 'JACK' || element === 'QUEEN' || element === 'KING') {
           this.addCount(10)
@@ -29,6 +29,14 @@ class Cards {
           this.addCount(element)
         }
       })
+    }
+
+    checkBlackjack() {
+      if (this.count == 21) {
+        document.querySelector('.result').style.display = 'flex'
+        document.querySelector('.result').innerText = 'BlackJack!'
+
+      }
     }
   }
 
@@ -85,6 +93,7 @@ function GameDisplay(deal) {
     playerCards.deal(deal.cards[0], deal.cards[2])
     dealerCards.deal(deal.cards[1], deal.cards[3])
     playerCards.initialCount()
+    playerCards.checkBlackjack()
     
     this.playerFirstCard.src = playerCards.cards[0].image
     this.dealerFirstCard.src = dealerCards.cards[0].image
@@ -150,14 +159,27 @@ function GameDisplay(deal) {
     if (value === 'JACK' || value === 'QUEEN' || value === 'KING') {
       value = 10
     } else if (value === 'ACE'){
-      value = 11
+        if (playerCards.count >= 11) {
+          value = 1
+        } else {
+          value = 11
+        }
     }
 
-    playerCards.addCount(+value)
+    if (value + playerCards.count > 21) {
+      playerCards.addCount(+value)
+      this.stand()
+    } else {
+      playerCards.addCount(+value)
+    }
+
   }
 
 
   this.stand = () => {
     console.log('sttoood')
+    this.result.style.display = 'flex'
+    this.result.innerText = 'Bust!'
+
   }
 }

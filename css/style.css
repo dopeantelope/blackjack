@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/background.webp");
+  background-size: cover;
+  overflow: hidden;
+}
+
+h3 {
+  font-size: 24px;
+  font-family: 'Roboto Slab';
+  color: white;
+  display: flex;
+}
+
+button {
+  font-family:'Times New Roman', Times, serif;
+}
+
+.felt {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #116626;
+  width: 70%;
+  height: 640px;
+  padding: 20px 0;
+  border: 15px solid #722600;
+  border-radius: 20px;
+  box-shadow: rgba(21, 23, 24, 0.7) 6px 6px 12px 0px inset, rgba(0, 0, 0, 0.2) -6px -6px 12px 2px inset, rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  width: 70%;
+}
+
+
+.title-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+span {
+  font-size: 24px;
+  color: white;
+  font-family: 'Roboto Slab';
+  margin: 10px;
+}
+
+h1 {
+  font-size: 74px;
+  color: gold;
+  font-family: 'Alegreya SC';
+  text-transform: uppercase;
+}
+
+.result {
+  font-size: 32px;
+  position: fixed;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: gold;
+  font-family: 'Alegreya SC';
+  text-transform: uppercase;
+}
+
+h3 {
+  justify-content: center;
+  display: none;
+}
+
+#dealer-cards, #player-cards {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.dealer-count {
+  margin-bottom: -130px;
+}
+
+.player-count {
+  margin-top: -130px;
+}
+
+.dealerSecondCard {
+  height: 175px;
+  width: 125.95px;
+  border-radius: 6px;
+  display: none;
+}
+
+img {
+  height: 175px;
+  width: auto;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  gap: 20px;
+}
+
+button {
+  font-size: 30px;
+  padding: 10px 20px;
+  font-family: 'Alegreya SC';
+  cursor: pointer;
+}
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

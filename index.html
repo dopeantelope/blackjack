@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>BlackJack!</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@700&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		
+		<h2 class="result"></h2>
+		<section class="felt">
+			<h3 class="dealer-count score"></h3>
+			<div id="dealer-cards">
+				<img class="dealerFirstCard" src="" alt="">
+				<img class="dealerSecondCard" src="" alt="">
+			</div>
+
+			<section class="title-screen">
+				<h1>BlackJack</h1>
+				<span>Click Deal to play!</span>
+			</section>
+			<div id="player-cards">
+				<img class="playerFirstCard" src="" alt="">
+				<img class="playerSecondCard" src="" alt="">
+			</div>
+			<h3 class="player-count score"></h3>
+		</section>
+		<section class="actions">
+			<button id="deal-button">deal</button>
+			<button id="hit-button">hit</button>
+			<button id="stand-button">stand</button>
+		</section> 
+
+		<script type="module" src="js/main.js"></script>
+	</body>
+</html>

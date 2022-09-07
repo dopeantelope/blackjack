@@ -14,21 +14,21 @@ class Cards {
     }
 
     initialCount() {
-      let cardValues = this.cards.map(element => +element.value)
-      let count = cardValues.reduce((acc, curr) => acc + curr, 0)
-      this.count = count
+      let valuesArray = playerCards.cards.map(element => element.value)
+      this.convertToNum(valuesArray)
     }
 
-    getCardValue = () => {
-      let value = card.value
-  
-      if (value === 'JACK' || value === 'QUEEN' || value === 'KING') {
-        value = 10
-      } else if (value === 'ACE'){
-        value = 11
-      }
-  
-      playerCards.addCount(+value)
+    convertToNum = (card) => {
+      card.forEach(element => {
+        if (element === 'JACK' || element === 'QUEEN' || element === 'KING') {
+          this.addCount(10)
+        } else if (element === 'ACE'){
+          this.addCount(11)
+          console.log('fuck its an ace')
+        } else {
+          this.addCount(element)
+        }
+      })
     }
   }
 
@@ -57,7 +57,7 @@ async function dealCards(deckId){
     const deal = await response.json();
     const gameDisplay = new GameDisplay(deal)
     document.getElementById('deal-button').addEventListener('click', gameDisplay.deal)
-    document.getElementById('stand-button').addEventListener('click', gameDisplay.reset)
+    document.getElementById('stand-button').addEventListener('click', gameDisplay.stand)
     document.getElementById('hit-button').addEventListener('click', gameDisplay.hit)
   } catch (err) {
     console.log(`error ${err}`);
@@ -101,6 +101,7 @@ function GameDisplay(deal) {
         const response = await fetch(`http://deckofcardsapi.com/api/deck/${deckId}/draw/?count=1`);
         const oneCard = await response.json();
         playerCards.addCard(oneCard.cards[0]);
+        console.log(playerCards.cards)
       } catch (err) {
         console.log(`error ${err}`);
       }
@@ -156,7 +157,7 @@ function GameDisplay(deal) {
   }
 
 
-  this.reset = () => {
-    location.reload()
+  this.stand = () => {
+    console.log('sttoood')
   }
 }

@@ -2,6 +2,8 @@
 
 A web application game of BlackJack.
 
+Work in progress - converting to OOP
+
 ![Alt Text](https://i.ibb.co/N3Wq8pd/Screenshot-2022-08-15-at-12-08-29.png)
 
 ## How It's Made:

@@ -2,8 +2,6 @@
 
 A web application game of BlackJack.
 
-**Link to project:** https://twitter.com/rexxlifebot
-
 ![Alt Text](https://i.ibb.co/N3Wq8pd/Screenshot-2022-08-15-at-12-08-29.png)
 
 ## How It's Made:
